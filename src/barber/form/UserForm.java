@@ -17,15 +17,6 @@ public class UserForm {
         ResultSet rs = dbHelper.execuQuery(sql);
         try {
             while (rs.next()){
-                System.out.println(rs.getInt("Uid"));
-                System.out.println(rs.getString("Uname"));
-                System.out.println(rs.getInt("Uscore"));
-                System.out.println(rs.getLong("Utel"));
-                System.out.println(rs.getInt("Uage"));
-                System.out.println(rs.getString("Upic"));
-                System.out.println(rs.getString("Upassword"));
-
-
                 userBean.setUid(rs.getInt("Uid"));
                 userBean.setUage(rs.getInt("Uage"));
                 userBean.setUname(rs.getString("Uname"));
