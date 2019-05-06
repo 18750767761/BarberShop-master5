@@ -10,6 +10,21 @@ public class UserForm {
     private static DBHelper dbHelper = new DBHelper();
     private UserBean userBean = new UserBean();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //   查询用户信息
     public static UserBean queryUserBean(Integer userId) {
         UserBean userBean = new UserBean();
