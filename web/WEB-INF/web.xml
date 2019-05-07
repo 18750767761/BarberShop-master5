@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-
+    <!--配置所谓的servlet，filter，listenner的地方，目前只用到servlet-->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>barber.servlet.LoginServlet</servlet-class>

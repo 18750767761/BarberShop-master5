@@ -1,7 +1,7 @@
 package barber.bean;
 
 public class UserBean {
-    private Integer Uid;
+    private Long Uid;
     private String Upassword;
     private String Uname;
     private Integer Uage;
@@ -17,11 +17,11 @@ public class UserBean {
         Upassword = upassword;
     }
 
-    public Integer getUid() {
+    public Long getUid() {
         return Uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(Long uid) {
         Uid = uid;
     }
 

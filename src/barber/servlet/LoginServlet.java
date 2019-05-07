@@ -1,8 +1,6 @@
 package barber.servlet;
-
 import barber.bean.UserBean;
 import barber.form.UserForm;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

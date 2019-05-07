@@ -10,21 +10,6 @@ public class UserForm {
     private static DBHelper dbHelper = new DBHelper();
     private UserBean userBean = new UserBean();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //   查询用户信息
     public static UserBean queryUserBean(Integer userId) {
         UserBean userBean = new UserBean();
@@ -32,7 +17,7 @@ public class UserForm {
         ResultSet rs = dbHelper.execuQuery(sql);
         try {
             while (rs.next()){
-                userBean.setUid(rs.getInt("Uid"));
+                userBean.setUid(rs.getLong("Uid"));
                 userBean.setUage(rs.getInt("Uage"));
                 userBean.setUname(rs.getString("Uname"));
                 userBean.setUpic(rs.getString("Upic"));
