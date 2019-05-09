@@ -40,19 +40,7 @@
 <body id="home">
 
 <div id="templatemo_wrapper">
-    <div id="templatemo_header">
-        <div id="site_title"><a href="#">这里放logo的图片</a></div>
-        <div id="templatemo_menu" class="ddsmoothmenu">
-            <ul>
-                <li><a href="首页.html" class="selected">首页</a></li>
-                <li><a href="hairStyle.jsp">发型屋</a></li>
-                <li><a href="test.jsp">理发师</a></li>
-                <li><a href="about.html">我的预约</a></li>
-                <li><a href="contact.html"><%out.print(userBean.getUid());%></a></li>
-            </ul>
-            <br style="clear: left"/>
-        </div>
-    </div>
+   <jsp:include page="main_head.jsp"/>
     <%--少了左侧边栏--%>
 
     <div id="templatemo_slider"><span class="sliderframe"></span>
