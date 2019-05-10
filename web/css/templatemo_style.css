@@ -103,7 +103,7 @@ ul.list_bullet li a:hover { color: #555 }
 }
 #templatemo_main {
 	clear: both;
-	width: 960px;
+	width: 460px;
 	margin: 0 auto 40px;
 }
 #templatemo_bottom_wrapper {
@@ -156,7 +156,7 @@ ul.footer_gallery li img { border: 1px solid #777; padding: 4px; background: #33
 }
 
 .col { margin: 0 30px 30px 0; float: left }
-.col_2 { width: 465px }
+.col_2 { width: 265px }
 .col_3 { width: 300px }
 .col_32 { width: 630px }
 .col_4 { width: 217.5px }

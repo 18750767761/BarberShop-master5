@@ -1,4 +1,6 @@
-<%@ page import="barber.bean.UserBean" %><%--
+<%@ page import="barber.bean.UserBean" %>
+<%@ page import="barber.bean.HairStyleBean" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: 11616
   Date: 2019/5/8
@@ -29,38 +31,42 @@
 <div id="templatemo_wrapper">
     <jsp:include page="main_head.jsp"/>
 
-    <jsp:include page="test.jsp" flush="true"/>
+    <jsp:include page="hair_type.jsp" flush="true"/>
+    <%
+        List<HairStyleBean> hairStyleBean = (List<HairStyleBean>) request.getAttribute("hair");
+        out.print(hairStyleBean.size());
+    %>
 
     <div id="templatemo_main">
 
+        <%
+            for (int i = 0; i < 10; i++) {
+                System.out.println(hairStyleBean.get(i).getHpic());
+        %>
         <div class="col col_2">
-            <img src="images/portfolio/01.jpg" alt="image"/>
+            <img src="<%=hairStyleBean.get(i).getHpic()%>" alt="image" style="width: 265px;height:230px"/>
             <p class="image_caption">
-                <% String price = request.getParameter("copyThisA");
-                    if (price == null) {
-                        out.print("go fuck yourself");
-                    } else {
-                        out.print(price);
-                    }
+                <%
+                    hairStyleBean.get(i).getHname();
                 %><a href="" rel="nofollow"></a>
                 <a href="#" class="more">预定</a>
             </p>
+            <%}%>
         </div>
 
-
-        <div class="templatemo_paging">
-            <ul>
-                <li><a href="#">向前</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">向后</a></li>
-            </ul>
-            <div class="clear"></div>
-        </div>
+        <%--<div class="templatemo_paging">--%>
+        <%--<ul>--%>
+        <%--<li><a href="#">向前</a></li>--%>
+        <%--<li><a href="#">1</a></li>--%>
+        <%--<li><a href="#">2</a></li>--%>
+        <%--<li><a href="#">3</a></li>--%>
+        <%--<li><a href="#">4</a></li>--%>
+        <%--<li><a href="#">5</a></li>--%>
+        <%--<li><a href="#">6</a></li>--%>
+        <%--<li><a href="#">向后</a></li>--%>
+        <%--</ul>--%>
+        <%--<div class="clear"></div>--%>
+        <%--</div>--%>
 
     </div>
 </div>

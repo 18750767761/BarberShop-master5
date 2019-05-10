@@ -13,4 +13,13 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HairshowServlet</servlet-name>
+        <servlet-class>barber.servlet.HairshowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HairshowServlet</servlet-name>
+        <url-pattern>/hair</url-pattern>
+    </servlet-mapping>
 </web-app>

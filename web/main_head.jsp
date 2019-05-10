@@ -26,7 +26,7 @@
         <ul>
             <li><a href="首页.html" class="selected">首页</a></li>
             <li><a href="hairStyle.jsp">发型屋</a></li>
-            <li><a href="test.jsp">理发师</a></li>
+            <li><a href="hair_type.jsp">理发师</a></li>
             <li><a href="about.html">我的预约</a></li>
             <li><a href="contact.html">null</a></li>
         </ul>
