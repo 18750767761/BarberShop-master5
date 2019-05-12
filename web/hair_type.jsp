@@ -25,15 +25,12 @@
             margin: 0;
             padding: 0;
         }
-
         ol, ul {
             list-style: none;
         }
-
         blockquote, q {
             quotes: none;
         }
-
         a {
             text-decoration: none;
             color: #2d2f30;
@@ -43,38 +40,28 @@
             -ms-transition: all .3s linear;
             transition: all .3s linear;
         }
-
         a:focus {
             outline: none;
         }
-
-
-
         .updown_box h3 {
             font-size: 16px;
             margin-bottom: 18px;
             padding-left: 10px;
         }
-
         .updown_box ul li {
             float: left;
             margin: 0 10px 10px 10px;
         }
-
         .updown_box ul li a {
             display: block;
             font-size: 14px;
             padding: 6px 8px;
             line-height: 18px;
         }
-
         .updown_box ul li.selected a {
             background: #7ecbc8;
             color: #fff;
         }
-
-
-
         .select-result ul li a {
             height: 30px;
             padding: 0 24px 0 10px;
@@ -85,7 +72,6 @@
             margin: 0 10px 10px 0;
             color: #fff;
             font-size: 14px;
-            background: url(images/close1.png) 90% center no-repeat #7ecbc8;
         }
     </style>
 </head>
