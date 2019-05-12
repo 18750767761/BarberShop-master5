@@ -1,4 +1,10 @@
 <%@ page contentType="text/html; charset=gb2312" import="java.sql.*" errorPage="" %>
+<%@ page import="barber.bean.OrderBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="barber.form.OrderForm" %>
+<%@ page import="barber.bean.HairStyleBean" %>
+<%@ page import="barber.form.HairForm" %>
 <html>
 <head>
     <title>main_03</title>
@@ -24,21 +30,37 @@
                         <td>订单时间</td>
                         <td colspan="2">状态</td>
                     </tr>
-
+                    <%
+                        List<OrderBean> order = OrderForm.quaryOrder();
+                        for (int i = 0; i < order.size(); i++) {
+                    %>
                     <tr>
-                        <td><%="orderID"%>
+                        <td><%=order.get(i).getOid()%>
                         </td>
-                        <td><%="hairID"%>
+                        <td><%=order.get(i).getHid()%>
                         </td>
-                        <td><img src="images/2.jpg" width="150" height="150"/></td>
-                        <td><%="orderPrice"%>
+                        <% HairStyleBean hair = HairForm.quaryHair(order.get(i).getHid());%>
+                        <td><img src="<%=hair.getHpic()%>" width="150" height="150"/></td>
+                        <td><%=order.get(i).getSprice()%>元
                         </td>
-                        <td><%="orderDate"%>
+                        <%
+                            String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(order.get(i).getStime());
+
+                        %>
+                        <td><%=time%>
                         </td>
-                        <td>未执行</td>
-                        <td><a href="delorder.jsp">取消预约</a></td>
-                        <td colspan="2">已执行</td>
+                        <%
+                            if (order.get(i).getScondition() != 1) {
+                        %>
+                        <td>已完成</td>
+                        <%} else {%>
+                        <td><a href="orderremove.jsp?order=<%=order.get(i).getOid()%>">取消预约</a></td>
+                        <%
+                                }
+                            }
+                        %>
                     </tr>
+
                 </table>
             </div>
         </td>

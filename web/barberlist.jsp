@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=gb2312" import="java.lang.*, java.io.*, java.sql.*, java.util.*" %>
 <%@ page import="barber.bean.BarberBean" %>
 <%@ page import="barber.form.BarberForm" %>
-<%@ page import="barber.bean.HairStyleBean" %>
 
 <html>
 <head>
@@ -32,7 +31,7 @@
                     <td height="120" width="335">
                         <table width="335" height="120">
                             <tr>
-                                <td width="120"><img src="images/3.jpg" width="120"
+                                <td width="120"><img src="<%=barberlist.get(i).getBpic()%>" width="120"
                                                      height="120"></td>
                                 <td width="215">
                                     <table width="215" height="120">

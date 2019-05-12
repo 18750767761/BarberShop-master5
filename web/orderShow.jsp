@@ -101,8 +101,9 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <div align="center"><a href="order?uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>"
-                                                               onclick="return confirm('确认预订吗?');">确认预定</a> <a
+                                        <div align="center"><a
+                                                href="order?uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>"
+                                                onclick="return confirm('确认预订吗?');">确认预定</a> <a
                                                 href="barberlist.jsp">重新选择</a></div>
                                     </td>
                                 </tr>

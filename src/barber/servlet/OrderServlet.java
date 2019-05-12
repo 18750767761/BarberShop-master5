@@ -1,5 +1,7 @@
 package barber.servlet;
 
+import barber.form.OrderForm;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,9 +14,8 @@ public class OrderServlet extends HttpServlet {
         Long uid = Long.valueOf(httpServletRequest.getParameter("uid"));
         Long bid = Long.valueOf(httpServletRequest.getParameter("bid"));
         Long hid = Long.valueOf(httpServletRequest.getParameter("hid"));
-
-        System.out.println(uid + " " + bid  + " " + hid);
-
+        OrderForm.insertOrder(uid,bid,hid);
+        httpServletRequest.getRequestDispatcher("orderlist.jsp").forward(httpServletRequest, httpServletResponse);
 
     }
 

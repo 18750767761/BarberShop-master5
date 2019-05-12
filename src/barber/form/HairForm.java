@@ -19,7 +19,6 @@ public class HairForm {
     //    查询不同发型的图片信息
     public static List<HairStyleBean> quaryHairStyle(String type) {
         String sql = "SELECT * FROM hairstyle where Hname ='" + type + "'";
-        System.out.println(sql);
         List<HairStyleBean> hairStyleList = new ArrayList<HairStyleBean>();
         HairStyleBean hair = null;
         try {
@@ -45,8 +44,6 @@ public class HairForm {
         String sql = "SELECT * FROM hairstyle where Hid =" + id;
         HairStyleBean hair = null;
         try {
-
-
             ResultSet resultSet = dbHelper.execuQuery(sql);
             while (resultSet.next()) {
                 hair = new HairStyleBean();

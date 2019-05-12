@@ -4,11 +4,11 @@ package barber.tool;
 import java.sql.*;
 
 public class DBHelper {
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost:3306/BarberShop?useUnicode=true&characterEncoding=utf8";
-    static final String USER = "root";
-    static final String password = "qq201314";
-    static Connection connection = null;
+    static final private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    static final private String DB_URL = "jdbc:mysql://localhost:3306/BarberShop?useUnicode=true&characterEncoding=utf8";
+    static final private String USER = "root";
+    static final private String password = "qq201314";
+    static private Connection connection = null;
     static Statement stmt = null;
 
     //    获取Mysql连接
@@ -30,7 +30,7 @@ public class DBHelper {
     }
 
 //    增删改操作
-    public void executeUpdate(String sql){
+    public boolean executeUpdate(String sql){
         if (connection==null){
             getConnection();
         }
@@ -39,8 +39,10 @@ public class DBHelper {
             statement.executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("SQLException"); 
+            System.out.println("SQLException");
+            return false;
         }
+        return true;
     }
 
 //    查询操作

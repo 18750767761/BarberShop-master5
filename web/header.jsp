@@ -26,12 +26,7 @@
         <td>
             <a href="orderlist.jsp" target="right"><img src="images/header_06.gif" width="111" height="34" alt=""
                                                         border="0"></a></td>
-        <td>
-            <a href="orderShow.jsp" target="right"><img src="images/header_06.gif" width="111" height="34" alt=""
-                                                        border="0"></a></td>
-        <td>
-            <a href="printOrder.jsp" target="right"><img src="images/header_09.gif" width="111" height="34" alt=""
-                                                        border="0"></a></td>
+
 
         <td>
             <img src="images/header_08.gif" width="112" height="34" alt="" border="0"></td>
