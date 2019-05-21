@@ -1,6 +1,6 @@
 package barber.servlet;
 
-import barber.form.OrderForm;
+import barber.dao.OrderDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +14,7 @@ public class OrderServlet extends HttpServlet {
         Long uid = Long.valueOf(httpServletRequest.getParameter("uid"));
         Long bid = Long.valueOf(httpServletRequest.getParameter("bid"));
         Long hid = Long.valueOf(httpServletRequest.getParameter("hid"));
-        OrderForm.insertOrder(uid,bid,hid);
+        OrderDao.insertOrder(uid,bid,hid);
         httpServletRequest.getRequestDispatcher("orderlist.jsp").forward(httpServletRequest, httpServletResponse);
 
     }

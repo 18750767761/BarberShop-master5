@@ -1,4 +1,4 @@
-package barber.form;
+package barber.dao;
 
 import barber.bean.HairStyleBean;
 import barber.tool.DBHelper;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HairForm {
+public class HairDao {
     static DBHelper dbHelper = new DBHelper();
 
     //    查询长发的图片信息

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <%@ page import="java.util.List" %>
 <%@ page import="barber.bean.HairStyleBean" %>
-<%@ page import="barber.form.HairForm" %>
+<%@ page import="barber.dao.HairDao" %>
 
 <html>
 <head>
@@ -32,7 +32,7 @@
                             if (request.getAttribute("hair") != null) {
                                 hairlist = (List<HairStyleBean>) request.getAttribute("hair");
                             } else {
-                                hairlist = HairForm.quaryLong();
+                                hairlist = HairDao.quaryLong();
                             }
                             if (hairlist.size() > 10) {
                                 n = 10;

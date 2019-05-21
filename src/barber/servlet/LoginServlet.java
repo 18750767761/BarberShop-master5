@@ -1,6 +1,8 @@
 package barber.servlet;
+
 import barber.bean.UserBean;
-import barber.form.UserForm;
+import barber.dao.UserDao;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,12 +18,23 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-
-        if (checkUsers(httpServletRequest, httpServletResponse)) {
-
-            RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("main.jsp");
-            requestDispatcher.forward(httpServletRequest, httpServletResponse);
+        Integer sign = Integer.valueOf(httpServletRequest.getParameter("sign"));
+        switch (sign) {
+            case (0)://登录检测操作
+                if (checkUsers(httpServletRequest, httpServletResponse)) {
+                    RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("main.jsp");
+                    requestDispatcher.forward(httpServletRequest, httpServletResponse);
+                }
+                break;
+            case (1)://注册操作
+                Long uid = Long.valueOf(httpServletRequest.getParameter("Uid"));
+                String upass = httpServletRequest.getParameter("Upassword");
+                UserDao.insertUserbean(uid, upass);
+                RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("index.jsp");
+                requestDispatcher.forward(httpServletRequest, httpServletResponse);
+                break;
         }
+
 
     }
 
@@ -29,7 +42,7 @@ public class LoginServlet extends HttpServlet {
     private boolean checkUsers(HttpServletRequest request, HttpServletResponse response) {
         Integer Uid = Integer.valueOf(request.getParameter("Uid"));
         String Upassword = request.getParameter("Upassword");
-        UserBean userBean = UserForm.queryUserBean(Uid);
+        UserBean userBean = UserDao.queryUserBean(Uid);
         if (userBean == null) {
             return false;
         }

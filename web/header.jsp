@@ -25,7 +25,7 @@
                     <ul class="nav navbar-nav navbar-right yhcx">
                         <li>
                             <a href="orderlist.jsp" style="color:#FFdd00 !important"><i class="fa fa-gift hot-yhcx"
-                                                                            style="color:#FFdd00 !important"></i>我的订单</a>
+                                                                                        style="color:#FFdd00 !important"></i>我的订单</a>
                         </li>
                         <li>
                             <a href="barberlist.jsp?Hid=34">会员中心</a>
@@ -63,12 +63,7 @@
                             <li class="item" _h_nav="support">
                                 <a href="orderlist.jsp">订单列表</a>
                             </li>
-                            <li class="item" _h_nav="cooperation">
-                                <a>合作共赢</a>
-                            </li>
-                            <li class="item" _h_nav="culture">
-                                <a>企业文化</a>
-                            </li>
+
                         </ul>
                     </nav>
                 </div>
@@ -139,121 +134,6 @@
             </div>
         </div>
 
-        <div class="sub-nav" _h_nav="plan" id="plan" style="display: none;">
-            <div class="container">
-
-                <dl style="margin-left:230px;">
-                    <dd>
-                        <a href="#" style="font-size: 15px;">烫发</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">油性发质护理</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">修复分叉</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">加固发根</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">科学造发</a>
-                    </dd>
-                </dl>
-
-            </div>
-        </div>
-
-        <div class="sub-nav" _h_nav="support" id="support" style="display: none;">
-            <!-- 店内服务 -->
-            <div class="container">
-                <dl style="margin-left: 300px;">
-                    <dt style="font-size:15px;">脚部服务</dt>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">剪脚指甲</a>
-                    </dd>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">脚部按摩</a>
-                    </dd>
-                </dl>
-                <dl style="width:15%;">
-                    <dt style="font-size:15px;text-align:center;">头部服务</dt>
-                    <div style="font-size:15px;text-align:center;">
-                        <dd>
-                            <a href="#" style="font-size: 15px;">掏耳屎</a>
-                        </dd>
-                        <dd>
-                            <a href="#" style="font-size: 15px;">头部按摩</a>
-                        </dd>
-                        <dd>
-                            <a href="#" style="font-size: 15px;">发型设计</a>
-                        </dd>
-                        <dd>
-                            <a href="#" style="font-size: 15px;">头部护理</a>
-                        </dd>
-                    </div>
-                </dl>
-                <dl>
-                    <dt style="font-size:15px;">身体服务</dt>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">按摩推拿</a>
-                    </dd>
-                </dl>
-            </div>
-        </div>
-
-        <div class="sub-nav" _h_nav="cooperation" id="cooperation" style="display: none;">
-            <div class="container">
-
-                <dl style="margin-left: 440px;">
-
-                    <dd>
-                        <a href="#" style="font-size: 15px;">渠道代理</a> <span class="hot">new</span></dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">推广联盟</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">合作伙伴</a>
-                    </dd>
-                </dl>
-            </div>
-        </div>
-
-        <div class="sub-nav" _h_nav="culture" id="culture" style="display: none;">
-            <div class="container">
-                <dl style="margin-left: 390px;">
-                    <dd>
-                        <a href="#" style="font-size: 15px;">公司介绍</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">发展历程</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">招贤纳士</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <a href="#" style="font-size: 15px;">联系我们</a>
-                    </dd>
-                </dl>
-            </div>
-        </div>
     </div>
 </div>
 

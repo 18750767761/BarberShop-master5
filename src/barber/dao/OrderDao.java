@@ -1,4 +1,4 @@
-package barber.form;
+package barber.dao;
 
 import barber.bean.OrderBean;
 import barber.tool.DBHelper;
@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 
-public class OrderForm {
+public class OrderDao {
     private static DBHelper dbHelper = new DBHelper();
 
     //    生成订单
