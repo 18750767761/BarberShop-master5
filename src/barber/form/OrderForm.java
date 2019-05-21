@@ -22,8 +22,8 @@ public class OrderForm {
     }
 
     //    查询订单
-    public static List<OrderBean> quaryOrder() {
-        String sql = "select * from server order by Sid desc";
+    public static List<OrderBean> quaryOrder(Long uid) {
+        String sql = "select * from server where Uid = " + uid + " order by Sid desc";
         List<OrderBean> serverlist = new ArrayList<OrderBean>();
         OrderBean server = null;
         ResultSet resultSet = dbHelper.execuQuery(sql);
@@ -46,7 +46,7 @@ public class OrderForm {
     }
 
     public static void deleteOrder(Long oid) {
-        String sql = "delete from server where Sid="+oid;
+        String sql = "delete from server where Sid=" + oid;
         System.out.println(sql);
         dbHelper.executeUpdate(sql);
     }

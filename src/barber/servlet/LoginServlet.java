@@ -18,6 +18,7 @@ public class LoginServlet extends HttpServlet {
     public void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
 
         if (checkUsers(httpServletRequest, httpServletResponse)) {
+
             RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("main.jsp");
             requestDispatcher.forward(httpServletRequest, httpServletResponse);
         }

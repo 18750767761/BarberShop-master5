@@ -13,7 +13,7 @@ public class HairForm {
 
     //    查询长发的图片信息
     public static List<HairStyleBean> quaryLong() {
-        return quaryHairStyle("long");
+        return quaryHairStyle("short");
     }
 
     //    查询不同发型的图片信息
