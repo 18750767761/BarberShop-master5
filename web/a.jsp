@@ -8,7 +8,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>路桥理发店lllll </title>
+
+    <title>test </title>
 
     <link rel="stylesheet" type="text/css" href="statics/css/font-awesome.min.css"/><!--图标库-->
     <link href="css/GongGao.css" rel="stylesheet" type="text/css"/>
