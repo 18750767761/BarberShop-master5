@@ -1,5 +1,5 @@
 <%@ page import="javax.persistence.criteria.Order" %>
-<%@ page import="barber.form.OrderForm" %><%--
+<%@ page import="barber.dao.OrderDao" %><%--
   Created by IntelliJ IDEA.
   User: 11616
   Date: 2019/5/12
@@ -14,7 +14,7 @@
 <body>
 <%
     Long oid = Long.valueOf(request.getParameter("order"));
-    OrderForm.deleteOrder(oid);
+    OrderDao.deleteOrder(oid);
     request.getRequestDispatcher("orderlist.jsp").forward(request,response);
 %>
 </body>

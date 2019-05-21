@@ -1,4 +1,4 @@
-<%@ page import="barber.form.HairForm" %>
+<%@ page import="barber.dao.HairDao" %>
 <%@ page import="barber.bean.HairStyleBean" %>
 <%@ page import="java.util.List" %>
 <%@ page import="barber.bean.UserBean" %><%--
@@ -44,7 +44,7 @@
                             if (request.getAttribute("hair") != null) {
                                 hairlist = (List<HairStyleBean>) request.getAttribute("hair");
                             } else {
-                                hairlist = HairForm.quaryLong();
+                                hairlist = HairDao.quaryLong();
                             }
                             if (hairlist.size() > 10) {
                                 n = 10;
