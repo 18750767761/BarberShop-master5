@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=gb2312" %>
-<%@ page import="barbershop.database.*"%>
 <html>
 <head>
 <title>delorder</title>

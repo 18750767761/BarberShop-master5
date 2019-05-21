@@ -3,124 +3,80 @@
 <%@ page import="barber.form.HairForm" %>
 <%@ page import="barber.form.BarberForm" %>
 <%@ page import="barber.bean.UserBean" %>
-<%@ page contentType="text/html;charset=gb2312" %>
+<%@ page contentType="text/html;charset=utf-8" %>
 
 <html>
 <head>
-    <title>UpdateVip</title>
+    <meta charset="UTF-8">
+    <title>Á°ÆËÆ§ËÆ¢Âçï</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="css/QueRenDingDang.css">
 </head>
+<%
+    Long hid = Long.valueOf(request.getParameter("Hid"));
+    Long bid = Long.valueOf(request.getParameter("Bid"));
+    UserBean user = (UserBean) session.getAttribute("user");
+    HairStyleBean hair = HairForm.quaryHair(hid);
+    BarberBean barber = BarberForm.quaryBaarber(bid);
+%>
 <body>
-
-<table background="images/right.gif" height="791" width="709" bordr="1">
-    <tr>
-        <td height="50"></td>
-    </tr>
-    <tr>
-        <td height="20">
-            <div align="center"><h1>»∑»œ‘§∂®∂©µ•</h1></div>
-        </td>
-    </tr>
-    <tr>
-        <td height="100">
-            <div align="center">
-                <%
-                    Long hid = Long.valueOf(request.getParameter("Hid"));
-                    Long bid = Long.valueOf(request.getParameter("Bid"));
-                    UserBean user = (UserBean) session.getAttribute("user");
-                    HairStyleBean hair = HairForm.quaryHair(hid);
-                    BarberBean barber = BarberForm.quaryBaarber(bid);
-                %>
-                <table>
-                    <tr>
-                        <td>
-                            <table border="1">
-                                <tr>
-                                    <td>ª·‘±ID:</td>
-                                    <td><%=user.getUid() %>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>ª·‘±’Ê µ–’√˚:</td>
-                                    <td><%=user.getUname()%>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>ª·‘±¡™œµµÁª∞£∫</td>
-                                    <td><%=user.getUtel()%>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <table>
-                                            <tr>
-                                                <td weight="150" colspan="3">‘§∂®∑¢–Õ£∫</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="<%=hair.getHpic()%>" weight="150"
-                                                         height="150"/></td>
-                                                <td>
-                                                    <table>
-                                                        <tr>
-                                                            <td>∑¢–ÕID£∫</td>
-                                                            <td><%=hair.getHid()%>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>∑¢–Õ√˚≥∆£∫</td>
-                                                            <td><%=hair.getHname()%>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>∑¢–Õº€∏Ò£∫</td>
-                                                            <td><%=hair.getHpic()%>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr></tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">‘§∂®¿Ì∑¢ ¶£∫</td>
-                                </tr>
-                                <tr>
-                                    <td>¿Ì∑¢ ¶ID£∫</td>
-                                    <td><%=barber.getBid()%>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>¿Ì∑¢ ¶–’√˚£∫</td>
-                                    <td><%=barber.getBname()%>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td height="40"></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <div align="center"><a
-                                                href="order?uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>"
-                                                onclick="return confirm('»∑»œ‘§∂©¬?');">»∑»œ‘§∂®</a> <a
-                                                href="barberlist.jsp">÷ÿ–¬—°‘Ò</a></div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-
-                </table>
+<div class="container">
+    <div class="main">
+        <div class="title">
+            <h4>Á°ÆËÆ§ËÆ¢Âçï</h4>
+            <p>News</p>
+        </div>
+        <div id="container">
+            <div class="product-details">
+                <h1>Êó†ÂàòÊµ∑ÂçäÊâé‰∏∏Â≠êÂ§¥</h1>
+                <span class="hint-star star">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star-half-o" aria-hidden="true"></i>
+					<i class="fa fa-star-o" aria-hidden="true"></i>
+				</span>
+                <li style="padding: 10px;">‰ºöÂëòID:<%=user.getUid() %>
+                </li>
+                <li style="padding: 10px;">ÂßìÂêç:<%=user.getUname()%>
+                </li>
+                <li style="padding: 10px;">ËÅîÁ≥ªÁîµËØù:<%=user.getUtel()%>
+                </li>
+                <li style="padding: 10px;">È¢ÑÂÆöÂèëÂûãÂ∏à:<%=barber.getBname()%>
+                </li>
+                <div class="controlLeft">
+                    <button class="btn"
+                            href="order?uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>"
+                            onclick="return confirm('Á°ÆËÆ§È¢ÑËÆ¢Âêó?');">
+                        <span class="price">¬•<%=hair.getHprice()%></span>
+                        <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        <span class="buy" onclick="window.location.href = 'order?uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>'"
+                              onclick="return confirm('Á°ÆËÆ§È¢ÑËÆ¢Âêó?');">Á´ãÂç≥È¢ÑÁ∫¶</span>
+                    </button>
+                </div>
+                <div class="controlRight">
+                        <button onclick="window.location.href = 'barberlist.jsp'" class="btn" >
+                            <span>ÂèñÊ∂àÈ¢ÑÁ∫¶</span>
+                        </button>
+                </div>
             </div>
-        </td>
-    </tr>
-    <tr>
-        <td height="200"></td>
-    </tr>
-</table>
+            <div class="product-image">
+                <img src="<%=hair.getHpic()%>" alt="Omar Dsoky">
+                <div class="info">
+                    <h2>ÂèëÂûãÊèèËø∞</h2>
+                    <ul style="margin-left: 30px;">
+                        <li><strong>ÂèëÂûãIDÔºö</strong><%=hair.getHid()%>
+                        </li>
+                        <li><strong>ÂèëÂûãÂêçÁß∞Ôºö</strong><%=hair.getHname()%>
+                        </li>
+                        <li><strong>ÂèëÂûã‰ª∑Ê†ºÔºö</strong><%=hair.getHprice()%>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+
 </html>
