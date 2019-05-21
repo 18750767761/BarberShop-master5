@@ -1,4 +1,4 @@
-package barber.form;
+package barber.dao;
 
 
 import barber.bean.BarberBean;
@@ -8,9 +8,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static barber.form.HairForm.dbHelper;
+import static barber.dao.HairDao.dbHelper;
 
-public class BarberForm {
+public class BarberDao {
 
 
     //    查询不同理发师信息

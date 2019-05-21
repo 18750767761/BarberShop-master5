@@ -1,14 +1,15 @@
-<%@ page import="barber.form.HairForm" %>
+<%@ page import="barber.dao.HairDao" %>
 <%@ page import="barber.bean.HairStyleBean" %>
 <%@ page import="barber.bean.UserBean" %>
 <%@ page import="barber.bean.OrderBean" %>
-<%@ page import="barber.form.OrderForm" %>
+<%@ page import="barber.dao.OrderDao" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>店</title>
+
+    <title>路桥理发店lllll </title>
 
     <link rel="stylesheet" type="text/css" href="statics/css/font-awesome.min.css"/><!--图标库-->
     <link href="css/GongGao.css" rel="stylesheet" type="text/css"/>
@@ -31,7 +32,7 @@
             <table style="width:100%;height:100%;" cellspacing="15px">
                     <%
                     UserBean user = (UserBean) session.getAttribute("user");
-                    List<OrderBean> order = OrderForm.quaryOrder(user.getUid());
+                    List<OrderBean> order = OrderDao.quaryOrder(user.getUid());
                     for (int i = 0; i < order.size(); i++) {
                 %>
                 <tr>
@@ -50,7 +51,7 @@
                                 </li>
                             </div>
                             <div class="product-image">
-                                <% HairStyleBean hair = HairForm.quaryHair(order.get(i).getHid());%>
+                                <% HairStyleBean hair = HairDao.quaryHair(order.get(i).getHid());%>
                                 <img src="<%=hair.getHpic()%>" alt="Omar Dsoky">
                                 <div class="info">
                                     <h2>发型详情</h2>

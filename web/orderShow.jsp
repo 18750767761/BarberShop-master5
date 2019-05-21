@@ -1,7 +1,7 @@
 <%@ page import="barber.bean.HairStyleBean" %>
 <%@ page import="barber.bean.BarberBean" %>
-<%@ page import="barber.form.HairForm" %>
-<%@ page import="barber.form.BarberForm" %>
+<%@ page import="barber.dao.HairDao" %>
+<%@ page import="barber.dao.BarberDao" %>
 <%@ page import="barber.bean.UserBean" %>
 <%@ page contentType="text/html;charset=utf-8" %>
 
@@ -16,8 +16,8 @@
     Long hid = Long.valueOf(request.getParameter("Hid"));
     Long bid = Long.valueOf(request.getParameter("Bid"));
     UserBean user = (UserBean) session.getAttribute("user");
-    HairStyleBean hair = HairForm.quaryHair(hid);
-    BarberBean barber = BarberForm.quaryBaarber(bid);
+    HairStyleBean hair = HairDao.quaryHair(hid);
+    BarberBean barber = BarberDao.quaryBaarber(bid);
 %>
 <body>
 <div class="container">

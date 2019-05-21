@@ -1,4 +1,4 @@
-<%@ page import="barber.form.BarberForm" %>
+<%@ page import="barber.dao.BarberDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="barber.bean.BarberBean" %>
 <%@ page import="java.util.List" %>
@@ -27,7 +27,7 @@
                     <%
 
                         int n = 0;
-                        List<BarberBean> barberlist = BarberForm.quaryBarber();
+                        List<BarberBean> barberlist = BarberDao.quaryBarber();
                         if (barberlist.size() > 10) {
                             n = 10;
                         } else n = barberlist.size();
