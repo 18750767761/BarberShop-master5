@@ -20,6 +20,8 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
+<script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="statics/js/main.js" type="text/javascript" charset="utf-8"></script>
 <div class="con">
     <jsp:include page="left.jsp"/>
     <div class="right">
@@ -66,6 +68,7 @@
                             <%}%>
                         </div>
                             <%}%>
+
             </table>
         </div>
     </div>

@@ -27,12 +27,12 @@
                     <%
 
                         int n = 0;
-                        BarberForm barberForm = new BarberForm();
                         List<BarberBean> barberlist = BarberForm.quaryBarber();
                         if (barberlist.size() > 10) {
                             n = 10;
                         } else n = barberlist.size();
                         for (int i = 0; i < n; i++) {
+//                            System.out.println(barberlist.get(i).getBpic());
                     %>
                     <div class="col-md-4 col-sm-4">
                         <div class="item">
@@ -55,15 +55,17 @@
                             </div>
                             <tr>
                                 <%
-                                    Long hid = Long.valueOf(request.getParameter("Hid"));
+                                    if (request.getParameter("Hid") != null) {
+                                        Long hid = Long.valueOf(request.getParameter("Hid"));
                                 %>
                                 <div class="controlRight">
                                     <a type="submit" class="btn"
-                                            href="orderShow.jsp?Bid=<%=barberlist.get(i).getBid()%>&Hid=<%=hid%>">
+                                       href="orderShow.jsp?Bid=<%=barberlist.get(i).getBid()%>">
+                                        <%--&Hid=<%=hid%>--%>
                                         预定
                                     </a>
                                 </div>
-
+                                <%}%>
                             </tr>
                         </div>
                     </div>

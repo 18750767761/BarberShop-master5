@@ -24,11 +24,11 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right yhcx">
                         <li>
-                            <a href="#" style="color:#FFdd00 !important"><i class="fa fa-gift hot-yhcx"
+                            <a href="orderlist.jsp" style="color:#FFdd00 !important"><i class="fa fa-gift hot-yhcx"
                                                                             style="color:#FFdd00 !important"></i>我的订单</a>
                         </li>
                         <li>
-                            <a href="a.jsp">会员中心</a>
+                            <a href="barberlist.jsp?Hid=34">会员中心</a>
                         </li>
                         <li class="lang-style">
                         </li>
@@ -55,7 +55,7 @@
 
                         <ul id="navbar" class="nav navbar-nav navbar-left">
                             <li class="item" _h_nav="product">
-                                <a href="hairlist.jsp">发型大全</a>
+                                <a href="login">发型大全</a>
                             </li>
                             <li class="item" _h_nav="plan">
                                 <a href="barberlist.jsp">理发师</a>
@@ -81,98 +81,58 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <dl style="width:12%;">
-                            <dt style="font-size:15px;">直发类发型</dt>
+                            <dt style="font-size:15px;">发型</dt>
                             <dd>
-                                <a href="#" style="font-size: 15px;">无刘海半扎丸子头</a></dd>
+                                <a href="hair?type=long" style="font-size: 15px;">长发</a></dd>
                             <dd>
-                                <a href="#" style="font-size: 15px;">中分刘海设计</a>
+                                <a href="hair?type=short" style="font-size: 15px;">短发</a>
                             </dd>
                             <dd>
-                                <a href="#" style="font-size: 15px;">偏分斜刘海</a>
-                            </dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">空气感刘海</a>
-                            </dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">韩式直发长发</a>
-                            </dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">韩式空气感刘海</a>
+                                <a href="hair?type=lihua" style="font-size: 15px;">梨花发</a>
                             </dd>
                         </dl>
-                        <dl style="width:10%;">
-                            <dt style="font-size:15px;">卷发类发型</dt>
-                            <div class="font-size:15px;text-align:center;">
-                                <dd>
-                                    <a href="#" style="font-size: 15px;">波浪卷</a>
-                                </dd>
-                                <dd>
-                                    <a href="#" style="font-size: 15px;">梨花头卷</a>
-                                </dd>
-                                <dd>
-                                    <a href="#" style="font-size: 15px;">羊毛卷</a>
-                                </dd>
-                                <dd>
-                                    <a href="#" style="font-size: 15px;">水波纹卷</a>
-                                </dd>
-                                <dd>
-                                    <a href="#" style="font-size: 15px;">小细卷</a>
-                                </dd>
-                                <dd>
-                                    <a href="#" style="font-size: 15px;">空气烫卷</a>
-                                </dd>
-                            </div>
-                            <div class="clearfix"></div>
+                        <dl style="width:12%;">
+                            <dt style="font-size:15px;">发型</dt>
+
+                            <dd>
+                                <a href="hair?type=liuhai" style="font-size: 15px;">刘海</a>
+                            </dd>
+                            <dd>
+                                <a href="hair?type=BOB" style="font-size: 15px;">BOB头</a>
+                            </dd>
+                            <dd>
+                                <a href="hair?type=juang" style="font-size: 15px;">卷发</a>
+                            </dd>
 
                         </dl>
-                        <dl style="width:10%;">
-                            <dt style="font-size:15px;">女士发型</dt>
+                        <dl style="width:12%;">
+                            <dt style="font-size:15px;">发型</dt>
                             <dd>
-                                <a href="#" style="font-size: 15px;">bobo头</a></dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">梨花头</a>
+                                <a href="hair?type=mawei" style="font-size: 15px;">马尾</a>
                             </dd>
                             <dd>
-                                <a href="#" style="font-size: 15px;">wob头</a>
+                                <a href="hair?type=midlong" style="font-size: 15px;">中长发</a>
                             </dd>
                             <dd>
-                                <a href="#" style="font-size: 15px;">lob头</a>
+                                <a href="hair?type=panfa" style="font-size: 15px;">盘发</a>
                             </dd>
+
                         </dl>
-                        <dl style="width:10%;">
-                            <dt style="font-size:15px;">男士发型</dt>
+                        <dl style="width:12%;">
+                            <dt style="font-size:15px;">发型</dt>
                             <dd>
-                                <a href="#" style="font-size: 15px;" style="font-size: 15px;">板寸发型</a></dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">毛寸发型</a>
+                                <a href="hair?type=ranfa" style="font-size: 15px;">染发</a>
                             </dd>
                             <dd>
-                                <a href="#" style="font-size: 15px;">背头发型</a>
+                                <a href="hair?type=strait" style="font-size: 15px;">直发</a>
                             </dd>
                             <dd>
-                                <a href="#" style="font-size: 15px;">分头发型</a>
+                                <a href="hair?type=wanzhi" style="font-size: 15px;">丸子头</a>
                             </dd>
                             <dd>
-                                <a href="#" style="font-size: 15px;">朋克发型</a>
+                                <a href="hair?type=wenli" style="font-size: 15px;">纹理</a>
                             </dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">皮卡路发型</a>
-                            </dd>
-                        </dl>
-                        <dl style="width:10%;">
-                            <dt style="font-size:15px;">短发类发型</dt>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">发卷外翘</a>
-                            </dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;"> 眉上刘海</a>
-                            </dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">微波刘海</a>
-                            </dd>
-                            <dd>
-                                <a href="#" style="font-size: 15px;">轻薄齐刘海</a>
-                            </dd>
+
                         </dl>
                     </div>
                 </div>
