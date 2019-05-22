@@ -38,20 +38,19 @@
             <div class="cont_forms">
                 <div class="cont_img_back_"><img src="images/po.jpg" alt=""/></div>
                 <form class="cont_form_login" method="post" >
-                    <h2>登录</h2>
+                    <h2>登录&注册</h2>
                     <input id="Uid" name="Uid" type="text" placeholder="请输入您的用户名"/>
                     <input name="Upassword" id="Upassword" type="password" placeholder="请输入您的密码"/>
                     <button class="btn_login" formaction="login?sign=0" onClick="cambiar_login()">登录</button>
                     <button class="btn_login" formaction="login?sign=1" onClick="cambiar_login()">注册</button>
                 </form>
                 <%--？--%>
-                <form class="cont_form_sign_up">
-                    <h2>注册</h2>
-                    <input type="text" placeholder="Email"/>
-                    <input type="text" placeholder="User"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="password" placeholder="Confirm Password"/>
-                    <button class="btn_sign_up" onClick="cambiar_sign_up()">SIGN UP</button>
+                <form class="cont_form_sign_up" method="post" >
+                    <h2>登录&注册</h2>
+                    <input id="Bid" name="Bid" type="text" placeholder="请输入您的用户名"/>
+                    <input name="Bpassword" id="Bpassword" type="password" placeholder="请输入您的密码"/>
+                    <button class="btn_sign_up" formaction="login?sign=2" onClick="cambiar_sign_up()">登录</button>
+                    <button class="btn_sign_up" formaction="login?sign=3" onClick="cambiar_sign_up()">注册</button>
                 </form>
             </div>
         </div>

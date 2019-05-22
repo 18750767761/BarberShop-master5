@@ -6,6 +6,15 @@ public class BarberBean {
     private int Bcondition;
     private String Bpic;
     private String Bcommons;
+    private String Bpassword;
+
+    public String getBpassword() {
+        return Bpassword;
+    }
+
+    public void setBpassword(String bpassword) {
+        Bpassword = bpassword;
+    }
 
     public String getBpic() {
         return Bpic;

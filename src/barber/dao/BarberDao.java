@@ -48,10 +48,19 @@ public class BarberDao {
                 barber.setBcondition(resultSet.getInt("Bcondition"));
                 barber.setBpic(resultSet.getString("Bpic"));
                 barber.setBcommons(resultSet.getString("Bcommons"));
+                barber.setBpassword(resultSet.getString("Bpassword"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return barber;
+    }
+
+
+    //    注册发型师信息
+    public static void insertBarberbean(Long bid, String bpass) {
+        String sql = "insert into barber(Bid,Bpassword) values(" + bid + ",'" + bpass + "')";
+        System.out.println(sql);
+        dbHelper.executeUpdate(sql);
     }
 }
