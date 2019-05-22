@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8" import="java.lang.*, java.io.*, java.sql.*, java.util.*" %>
 <html>
 <head>
-    <head>
         <meta charset="UTF-8">
         <title>路桥理发店</title>
         <link rel="stylesheet" type="text/css" href="statics/css/font-awesome.min.css"/><!--图标库-->
@@ -9,8 +8,8 @@
         <link rel="stylesheet" type="text/css" href="statics/css/style.css"/>
         <link href="statics/css/firstStyle.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="statics/css/ProfileCardStyle.css">
-    </head>
 </head>
+<body>
 <div class="banner-top index">
     <!-- 最上方的那一栏 -->
     <header class="header top-header">
@@ -136,5 +135,5 @@
 
     </div>
 </div>
-
+</body>
 </html>

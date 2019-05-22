@@ -22,6 +22,7 @@
 <script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 <script src="statics/js/main.js" type="text/javascript" charset="utf-8"></script>
 <div class="con">
+    <%  System.out.println("user");%>
     <jsp:include page="left.jsp"/>
     <div class="right">
         <div class="test">
@@ -63,7 +64,7 @@
                             %>
                             <a>已完成</a>
                             <%} else {%>
-                            <a><a href="orderremove.jsp?order=<%=order.get(i).getOid()%>">取消预约</a></a>
+                            <a href="orderremove.jsp?order=<%=order.get(i).getOid()%>">取消预约</a>
                             <%}%>
                         </div>
                             <%}%>

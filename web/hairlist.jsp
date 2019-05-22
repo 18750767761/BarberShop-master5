@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
+<%@ page contentType="text/html; charset=utf-8" errorPage="" %>
 <%@ page import="java.util.List" %>
 <%@ page import="barber.bean.HairStyleBean" %>
 <%@ page import="barber.dao.HairDao" %>
@@ -6,9 +6,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>¬∑«≈¿Ì∑¢µÍ</title>
+    <title>Ë∑ØÊ°•ÁêÜÂèëÂ∫ó</title>
 
-    <link rel="stylesheet" type="text/css" href="statics/css/font-awesome.min.css"/><!--Õº±Íø‚-->
+    <link rel="stylesheet" type="text/css" href="statics/css/font-awesome.min.css"/><!--ÂõæÊ†áÂ∫ì-->
     <link href="css/GongGao.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="statics/css/style.css"/>
     <link href="statics/css/firstStyle.css" rel="stylesheet" type="text/css"/>
@@ -25,10 +25,10 @@
             <table width="97%" align="center" cellspacing="20px">
                 <tr>
                     <td>
-                        <!-- ∑¢–Õ’π æµ⁄“ª–– -->
+                        <!-- ÂèëÂûãÂ±ïÁ§∫Á¨¨‰∏ÄË°å -->
                         <%
-                            List<HairStyleBean> hairlist = null;
-                            int n = 0;
+                            List<HairStyleBean> hairlist ;
+                            int n ;
                             if (request.getAttribute("hair") != null) {
                                 hairlist = (List<HairStyleBean>) request.getAttribute("hair");
                             } else {
@@ -41,16 +41,17 @@
                             }
                             for (int i = 0; i < n; i++) {
                         %>
-                        <table width="100%" height="150px" cellspacing="40px">
+                        <table width="100%" cellspacing="40px">
                             <tr align="center">
                                 <td class="css" colspan="2" rowspan="2" href="www.baidu.com">
                                     <a href="barberlist.jsp?Hid=<%=hairlist.get(i).getHid()%>">
                                         <div class="imgcard">
-                                            <img class="large" src="<%=hairlist.get(i).getHpic()%>"/>
+
+                                            <img class="large" src="<%=hairlist.get(i).getHpic()%>" alt="<%=hairlist.get(i).getHpic()%>"/>
                                             <div class="ZhanShiTuPian">
                                                 <p class="profile-card__txt">
                                                     <%=hairlist.get(i).getHname()%><br/>
-                                                    º€∏Ò:<%=hairlist.get(i).getHprice()%>
+                                                    ‰ª∑Ê†º:<%=hairlist.get(i).getHprice()%>
                                                 </p>
                                             </div>
                                         </div>
@@ -69,7 +70,7 @@
                                             <div class="ZhanShiTuPian">
                                                 <p class="profile-card__txt">
                                                     <%=hairlist.get(i).getHname()%><br/>
-                                                    º€∏Ò:<%=hairlist.get(i).getHprice()%>
+                                                    ‰ª∑Ê†º:<%=hairlist.get(i).getHprice()%>
                                                 </p>
                                             </div>
                                         </div>
@@ -88,7 +89,7 @@
                                             <div class="ZhanShiTuPian">
                                                 <p class="profile-card__txt">
                                                     <%=hairlist.get(i).getHname()%><br/>
-                                                    º€∏Ò:<%=hairlist.get(i).getHprice()%>
+                                                    ‰ª∑Ê†º:<%=hairlist.get(i).getHprice()%>
                                                 </p>
                                             </div>
                                         </div>

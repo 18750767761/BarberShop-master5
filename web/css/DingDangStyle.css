@@ -127,7 +127,17 @@ background: #DFC2F2;
 	position: relative;
 	overflow: hidden;
 	height: 150px;
-	float: left;
+	float: right;
+	width: 150px;
+	display: inline-block;
+}
+.product-image2 {
+	transition: all 0.3s ease-out;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	height: 150px;
+	float: right;
 	width: 150px;
 	display: inline-block;
 }

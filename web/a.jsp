@@ -51,7 +51,7 @@
                             </div>
                             <div class="product-image">
                                 <% HairStyleBean hair = HairDao.quaryHair(order.get(i).getHid());%>
-                                <img src="<%=hair.getHpic()%>" alt="Omar Dsoky">
+                                <img src="img/long/girl/46.jpg" alt="Omar Dsoky">
                                 <div class="info">
                                     <h2>发型详情</h2>
                                     <ul>

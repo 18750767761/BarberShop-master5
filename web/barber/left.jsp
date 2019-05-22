@@ -1,8 +1,16 @@
-<%@ page import="barber.bean.UserBean" %>
-<%@ page contentType="text/html; charset=utf-8" errorPage="" %>
+<%@ page contentType="text/html;charset=utf-8" %>
+<%@ page import="barber.bean.BarberBean" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: 11616
+  Date: 2019/5/22
+  Time: 15:32
+  To change this template use File | Settings | File Templates.
+--%>
+
 <html>
 <head>
-    <title>left</title>
+    <title>Title</title>
 </head>
 <body>
 <div class="left">
@@ -12,10 +20,11 @@
                  alt="profile card">
         </div>
         <%
-            UserBean user = (UserBean) session.getAttribute("user");
+            BarberBean barber = (BarberBean) session.getAttribute("barber");
+            session.setAttribute("barber",barber);
         %>
         <div class="profile-card__cnt js-profile-cnt">
-            <div class="profile-card__name"><%=user.getUname()%>
+            <div class="profile-card__name"><%=barber.getBname()%>
             </div>
             <div class="profile-card__txt">
                 真理惟一可靠的标准就是永远自相符合。<strong>鲁迅</strong></div>
@@ -28,32 +37,32 @@
                 </div>
 
                 <div class="profile-card-inf__item">
-                    <div class="profile-card-inf__title"><a href="outlogin.jsp">退出登录</a></div>
+                    <div class="profile-card-inf__title"><a href="../outlogin.jsp">退出登录</a></div>
                     <div class="profile-card-inf__txt">Following</div>
                 </div>
             </div>
             <div class="profile-card-social">
                 <a href="#" class="profile-card-social__item instagram">
 										<span class="icon-font">
-											<svg class="icon"><use xlink:href="#icon-instagram"></use></svg>
+											<svg class="icon"></svg>
 										</span>
                 </a>
 
                 <a href="#" class="profile-card-social__item behance">
 										<span class="icon-font">
-											<svg class="icon"><use xlink:href="#icon-behance"></use></svg>
+											<svg class="icon"></svg>
 										</span>
                 </a>
 
                 <a href="#" class="profile-card-social__item codepen">
 										<span class="icon-font">
-											<svg class="icon"><use xlink:href="#icon-codepen"></use></svg>
+											<svg class="icon"></svg>
 										</span>
                 </a>
 
                 <a href="#" class="profile-card-social__item link">
 										<span class="icon-font">
-											<svg class="icon"><use xlink:href="#icon-link"></use></svg>
+											<svg class="icon"></svg>
 										</span>
                 </a>
 
@@ -62,7 +71,7 @@
     </div>
     <div class="news-content">
         <div class="news-content-item">
-            <a href="javascript:;" class="news-content-title clearfix">
+            <a href="" class="news-content-title clearfix">
                 <div class="news-title-fl">
                     <div class="news-title-color"></div>
                     <div class="news-title-title">官方公告</div>

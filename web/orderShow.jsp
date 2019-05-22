@@ -17,7 +17,7 @@
     Long bid = Long.valueOf(request.getParameter("Bid"));
     UserBean user = (UserBean) session.getAttribute("user");
     HairStyleBean hair = HairDao.quaryHair(hid);
-    BarberBean barber = BarberDao.quaryBaarber(bid);
+    BarberBean barber = BarberDao.quaryBarber(bid);
 %>
 <body>
 <div class="container">
@@ -50,7 +50,7 @@
                             onclick="return confirm('确认预订吗?');">
                         <span class="price">¥<%=hair.getHprice()%></span>
                         <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                        <span class="buy" onclick="window.location.href = 'order?uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>'"
+                        <span class="buy" onclick="window.location.href = 'order?sign=0&uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>'"
                               onclick="return confirm('确认预订吗?');">立即预约</span>
                     </button>
                 </div>
