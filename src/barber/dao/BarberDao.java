@@ -36,7 +36,7 @@ public class BarberDao {
     }
 
     //    根据ID查询理发师信息
-    public static BarberBean quaryBaarber(Long id) {
+    public static BarberBean quaryBarber(Long id) {
         String sql = "SELECT * FROM barber where Bid=" + id;
         BarberBean barber = null;
         try {
@@ -55,7 +55,6 @@ public class BarberDao {
         }
         return barber;
     }
-
 
     //    注册发型师信息
     public static void insertBarberbean(Long bid, String bpass) {

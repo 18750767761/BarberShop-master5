@@ -26,6 +26,8 @@ public class LoginServlet extends HttpServlet {
                 if (checkUsers(httpServletRequest, httpServletResponse)) {
                     RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("main.jsp");
                     requestDispatcher.forward(httpServletRequest, httpServletResponse);
+                }else {
+                    httpServletResponse.sendRedirect("index.jsp");
                 }
                 break;
             case (1)://用户注册操作
@@ -35,13 +37,15 @@ public class LoginServlet extends HttpServlet {
                 RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("index.jsp");
                 requestDispatcher.forward(httpServletRequest, httpServletResponse);
                 break;
-            case (2):
+            case (2)://发型师登录检测操作
                 if (checkBarber(httpServletRequest, httpServletResponse)) {
                     RequestDispatcher requestDispatcher1 = httpServletRequest.getRequestDispatcher("barber/main.jsp");
                     requestDispatcher1.forward(httpServletRequest, httpServletResponse);
+                }else {
+                    httpServletResponse.sendRedirect("index.jsp");
                 }
                 break;
-            case (3):
+            case (3)://发型师注册操作
                 Long bid = Long.valueOf(httpServletRequest.getParameter("Bid"));
                 String bpass = httpServletRequest.getParameter("Bpassword");
                 BarberDao.insertBarberbean(bid, bpass);
@@ -75,7 +79,7 @@ public class LoginServlet extends HttpServlet {
     private boolean checkBarber(HttpServletRequest request, HttpServletResponse response) {
         Long Bid = Long.valueOf(request.getParameter("Bid"));
         String Bpassword = request.getParameter("Bpassword");
-        BarberBean barberBean = BarberDao.quaryBaarber(Bid);
+        BarberBean barberBean = BarberDao.quaryBarber(Bid);
         if (barberBean == null) {
             return false;
         }

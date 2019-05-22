@@ -1,19 +1,18 @@
-<%--
+<%@ page import="barber.bean.BarberBean" %>
+<%@ page import="barber.bean.OrderBean" %>
+<%@ page import="barber.dao.OrderDao" %>
+<%@ page import="java.util.List" %>
+<%@ page import="barber.bean.UserBean" %>
+<%@ page import="barber.dao.UserDao" %>
+<%@ page import="barber.bean.HairStyleBean" %>
+<%@ page import="barber.dao.HairDao" %><%--
   Created by IntelliJ IDEA.
   User: 11616
   Date: 2019/5/22
-  Time: 2:27
+  Time: 15:32
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html; charset=utf-8"  %>
-<%@ page import="barber.bean.OrderBean" %>
-<%@ page import="java.util.List" %>
-<%@ page import="barber.dao.OrderDao" %>
-<%@ page import="barber.bean.HairStyleBean" %>
-<%@ page import="barber.dao.HairDao" %>
-<%@ page import="barber.bean.UserBean" %>
-<%@ page import="barber.bean.BarberBean" %>
-<%@ page import="barber.dao.UserDao" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -27,14 +26,6 @@
     <link type="text/css" rel="stylesheet" href="../css/DingDangStyle.css">
 </head>
 <body>
-<%
-
-    BarberBean barber = (BarberBean) request.getAttribute("barber");
-    if (barber==null){
-        barber=(BarberBean)session.getAttribute("barber");
-    }
-    session.setAttribute("barber", barber);
-%>
 <jsp:include page="header.jsp"/>
 <script src="../statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 <script src="../statics/js/main.js" type="text/javascript" charset="utf-8"></script>
@@ -44,7 +35,8 @@
         <div class="test">
             <table style="width:100%;height:100%;" cellspacing="15px">
                 <%
-                    List<OrderBean> order = OrderDao.quaryOrderlist(barber.getBid(),1);
+                    BarberBean barber = (BarberBean) session.getAttribute("barber");
+                    List<OrderBean> order = OrderDao.quaryOrderlist(barber.getBid(),0);
                     for (int i = 0; i < order.size(); i++) {
                 %>
                 <tr>
@@ -53,20 +45,19 @@
                             <div class="product-details">
                                 <h3>订单编号:<%=order.get(i).getOid()%>
                                 </h3>
-                                <li>理发师:<%=order.get(i).getBid()%>
                                 </li>
-                                <li>用户ID:<%=order.get(i).getUid()%>
+                                <li>理发师:<%=barber.getBname()%>
                                 </li>
-                                <%UserBean user = UserDao.queryUserBean(order.get(i).getUid());%>
+                                <% UserBean user = UserDao.queryUserBean(order.get(i).getUid());%>
+                                <li>用户ID:<%=user.getUid()%>
+                                </li>
                                 <li>姓名:<%=user.getUname()%>
                                 </li>
                                 <li>电话:<%=user.getUtel()%>
-                                </li>
-
                             </div>
                             <div class="product-image">
                                 <% HairStyleBean hair = HairDao.quaryHair(order.get(i).getHid());%>
-                                <img src="<%='/'+hair.getHpic()%>" alt="Omar Dsoky">
+                                <img src="<%="/"+hair.getHpic()%>" alt="<%=hair.getHpic()%>">
                                 <div class="info">
                                     <h2>发型详情</h2>
                                     <ul>
@@ -79,9 +70,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="/order?sign=1&oid=<%=order.get(i).getOid()%>">完成订单</a>
-                        </div>
-                            <%}%>
+
+                        </div><%}%>
             </table>
         </div>
     </div>
