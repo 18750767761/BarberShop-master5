@@ -70,9 +70,12 @@
                                 <div class="info">
                                     <h2>发型详情</h2>
                                     <ul>
-                                        <li><strong>发型ID：</strong><%=hair.getHid()%></li>
-                                        <li><strong>发型名称：</strong><%=hair.getHname()%></li>
-                                        <li><strong>发型价格：</strong><%=hair.getHprice()%></li>
+                                        <li><strong>发型ID：</strong><%=hair.getHid()%>
+                                        </li>
+                                        <li><strong>发型名称：</strong><%=hair.getHname()%>
+                                        </li>
+                                        <li><strong>发型价格：</strong><%=hair.getHprice()%>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
