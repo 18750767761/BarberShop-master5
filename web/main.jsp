@@ -61,7 +61,7 @@
                                             <img class="large" src="<%=hairlist.get(i).getHpic()%>"/>
                                             <div class="ZhanShiTuPian">
                                                 <p class="profile-card__txt">
-                                                    <%=hairlist.get(i).getHname()%><br/>
+                                                    <%=hairlist.get(i).getHcomment()%><br/>
                                                     价格:<%=hairlist.get(i).getHprice()%>
                                                 </p>
                                             </div>

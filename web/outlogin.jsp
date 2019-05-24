@@ -15,7 +15,7 @@
     session.removeAttribute("user");
     session.removeAttribute("hair");
     session.removeAttribute("barber");
-    response.sendRedirect("index,jsp");
+    response.sendRedirect("index.jsp");
 %>
 </body>
 </html>

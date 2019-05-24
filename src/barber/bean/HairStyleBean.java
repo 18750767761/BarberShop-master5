@@ -7,7 +7,15 @@ public class HairStyleBean {
     private Integer Htime;
     private String Hpic;
     private String Hsex;
+    private String Hcomment;
 
+    public String getHcomment() {
+        return Hcomment;
+    }
+
+    public void setHcomment(String hcomment) {
+        Hcomment = hcomment;
+    }
 
     public Long getHid() {
         return Hid;

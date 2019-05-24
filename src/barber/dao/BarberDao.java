@@ -62,4 +62,19 @@ public class BarberDao {
         System.out.println(sql);
         dbHelper.executeUpdate(sql);
     }
+
+    //    查询当前的预约人数
+    public static int selectNum(Long bid) {
+        String sql = "select count(*) rec from server where Scondition =1 and Bid=" + bid + ";";
+        ResultSet rs = dbHelper.execuQuery(sql);
+        int rec = 0;
+        try {
+            while (rs.next()) {
+                rec = rs.getInt("rec");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rec;
+    }
 }

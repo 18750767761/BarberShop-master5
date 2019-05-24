@@ -5,6 +5,10 @@
 <%@ page import="barber.bean.HairStyleBean" %>
 <%@ page import="barber.dao.HairDao" %>
 <%@ page import="barber.bean.UserBean" %>
+<%@ page import="java.text.DateFormat" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Locale" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -22,7 +26,6 @@
 <script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 <script src="statics/js/main.js" type="text/javascript" charset="utf-8"></script>
 <div class="con">
-    <%  System.out.println("user");%>
     <jsp:include page="left.jsp"/>
     <div class="right">
         <div class="test">
@@ -42,9 +45,15 @@
                                 </li>
                                 <li>姓名:<%=user.getUname()%>
                                 </li>
-                                <li>电话:<%=user.getUtel()%>
-                                </li>
                                 <li>理发师ID:<%=order.get(i).getBid()%>
+                                </li>
+                                <%
+
+                                    Timestamp df = order.get(i).getStime();//设置日期格式
+                                    String timeStr = df.toString().substring(0, df.toString().indexOf("."));
+                                %>
+                                <%--<li>预约时间:<%=timeStr%>--%>
+                                <li>预约时间:<%=timeStr%>
                                 </li>
                             </div>
                             <div class="product-image">
@@ -53,9 +62,12 @@
                                 <div class="info">
                                     <h2>发型详情</h2>
                                     <ul>
-                                        <li><strong>发型ID：</strong><%=hair.getHid()%></li>
-                                        <li><strong>发型名称：</strong><%=hair.getHname()%></li>
-                                        <li><strong>发型价格：</strong><%=hair.getHprice()%></li>
+                                        <li><strong>发型ID：</strong><%=hair.getHid()%>
+                                        </li>
+                                        <li><strong>发型名称：</strong><%=hair.getHname()%>
+                                        </li>
+                                        <li><strong>发型价格：</strong><%=hair.getHprice()%>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

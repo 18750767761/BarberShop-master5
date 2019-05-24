@@ -16,8 +16,9 @@ public class OrderDao {
 
     //    生成订单
     public static boolean insertOrder(Long uid, Long bid, Long hid) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss");//设置日期格式
-        String sql = "insert into server(Uid,Bid,Hid,Stime,Sprice,Scondition) values(" + uid + "," + bid + "," + hid + ",'" + df.format(new Date()) + "'," + 20 + "," + 1 + ");";
+        SimpleDateFormat df = new SimpleDateFormat("yyyy:MM:dd HH:mm");//设置日期格式
+        int num =BarberDao.selectNum(bid);
+        String sql = "insert into server(Uid,Bid,Hid,Stime,Sprice,Scondition) values(" + uid + "," + bid + "," + hid + ",'" + df.format(new Date(new Date().getTime()+num*30*60*1000)) + "'," + 20 + "," + 1 + ");";
         return dbHelper.executeUpdate(sql);
     }
 

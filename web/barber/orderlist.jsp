@@ -63,7 +63,7 @@
                                     <ul>
                                         <li><strong>发型ID：</strong><%=hair.getHid()%>
                                         </li>
-                                        <li><strong>发型名称：</strong><%=hair.getHname()%>
+                                        <li><strong>发型名称：</strong><%=hair.getHcomment()%>
                                         </li>
                                         <li><strong>发型价格：</strong><%=hair.getHprice()%>
                                         </li>

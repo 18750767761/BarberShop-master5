@@ -3,6 +3,8 @@
 <%@ page import="barber.dao.HairDao" %>
 <%@ page import="barber.dao.BarberDao" %>
 <%@ page import="barber.bean.UserBean" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=utf-8" %>
 
 <html>
@@ -28,7 +30,7 @@
         </div>
         <div id="container">
             <div class="product-details">
-                <h1>无刘海半扎丸子头</h1>
+                <h1><%=hair.getHcomment()%></h1>
                 <span class="hint-star star">
 					<i class="fa fa-star" aria-hidden="true"></i>
 					<i class="fa fa-star" aria-hidden="true"></i>
@@ -44,6 +46,14 @@
                 </li>
                 <li style="padding: 10px;">预定发型师:<%=barber.getBname()%>
                 </li>
+                <%
+                    SimpleDateFormat df = new SimpleDateFormat("MM月dd号 HH:mm");//设置日期格式
+                    int num =BarberDao.selectNum(barber.getBid());
+
+                %>
+                <li style="padding: 10px;">预约时间:<%=df.format(new Date(new Date().getTime()+num*30*60*1000))%>-<%=df.format(new Date(new Date().getTime()+(num+1)*30*60*1000))%>
+                </li>
+
                 <div class="controlLeft">
                     <button class="btn"
                             href="order?uid=<%=user.getUid()%>&bid=<%=barber.getBid()%>&hid=<%=hair.getHid()%>"
@@ -67,7 +77,7 @@
                     <ul style="margin-left: 30px;">
                         <li><strong>发型ID：</strong><%=hair.getHid()%>
                         </li>
-                        <li><strong>发型名称：</strong><%=hair.getHname()%>
+                        <li><strong>发型名称：</strong><%=hair.getHcomment()%>
                         </li>
                         <li><strong>发型价格：</strong><%=hair.getHprice()%>
                         </li>

@@ -50,7 +50,26 @@
                                             <img class="large" src="<%=hairlist.get(i).getHpic()%>" alt="<%=hairlist.get(i).getHpic()%>"/>
                                             <div class="ZhanShiTuPian">
                                                 <p class="profile-card__txt">
-                                                    <%=hairlist.get(i).getHname()%><br/>
+                                                    <%=hairlist.get(i).getHcomment()%><br/>
+                                                    价格:<%=hairlist.get(i).getHprice()%>元
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                                <%
+                                    i++;
+                                    if (i == n - 1) {
+                                        break;
+                                    }
+                                %>
+                                <td class="css" colspan="2" rowspan="2" href="www.baidu.com">
+                                    <a href="barberlist.jsp?Hid=<%=hairlist.get(i).getHid()%>">
+                                        <div class="imgcard">
+                                            <img class="large" src="<%=hairlist.get(i).getHpic()%>"/>
+                                            <div class="ZhanShiTuPian">
+                                                <p class="profile-card__txt">
+                                                    <%=hairlist.get(i).getHcomment()%><br/>
                                                     价格:<%=hairlist.get(i).getHprice()%>
                                                 </p>
                                             </div>
@@ -69,26 +88,7 @@
                                             <img class="large" src="<%=hairlist.get(i).getHpic()%>"/>
                                             <div class="ZhanShiTuPian">
                                                 <p class="profile-card__txt">
-                                                    <%=hairlist.get(i).getHname()%><br/>
-                                                    价格:<%=hairlist.get(i).getHprice()%>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <%
-                                    i++;
-                                    if (i == n - 1) {
-                                        break;
-                                    }
-                                %>
-                                <td class="css" colspan="2" rowspan="2" href="www.baidu.com">
-                                    <a href="barberlist.jsp?Hid=<%=hairlist.get(i).getHid()%>">
-                                        <div class="imgcard">
-                                            <img class="large" src="<%=hairlist.get(i).getHpic()%>"/>
-                                            <div class="ZhanShiTuPian">
-                                                <p class="profile-card__txt">
-                                                    <%=hairlist.get(i).getHname()%><br/>
+                                                    <%=hairlist.get(i).getHcomment()%><br/>
                                                     价格:<%=hairlist.get(i).getHprice()%>
                                                 </p>
                                             </div>

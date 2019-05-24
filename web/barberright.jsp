@@ -41,16 +41,16 @@
                             <div class="tst-author">
                                 <h4><%=barberlist.get(i).getBname()%>
                                 </h4>
-                                <span><%=barberlist.get(i).getBcondition()%></span>
+                                <%--<span><%=barberlist.get(i).getBcondition()%></span>--%>
                             </div>
                             <p><%=barberlist.get(i).getBcommons()%>
                             </p>
                             <div class="tst-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                                <%
+//                                    预约人数
+                                    int num = BarberDao.selectNum(barberlist.get(i).getBid());
+                                %>
+                                目前预约人数：<%=num%>
                             </div>
                             <tr>
                                 <%

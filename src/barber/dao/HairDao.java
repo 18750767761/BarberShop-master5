@@ -13,7 +13,7 @@ public class HairDao {
 
     //    查询长发的图片信息
     public static List<HairStyleBean> quaryLong() {
-        return quaryHairStyle("long");
+        return quaryHairStyle("nvshengduanfa");
     }
 
     //    查询不同发型的图片信息
@@ -31,6 +31,7 @@ public class HairDao {
                 hair.setHprice(resultSet.getInt("Hprice"));
                 hair.setHname(resultSet.getString("Hname"));
                 hair.setHpic(resultSet.getString("Hpic"));
+                hair.setHcomment(resultSet.getString("Hcomment"));
                 hairStyleList.add(hair);
             }
         } catch (Exception e) {
@@ -53,6 +54,7 @@ public class HairDao {
                 hair.setHprice(resultSet.getInt("Hprice"));
                 hair.setHname(resultSet.getString("Hname"));
                 hair.setHpic(resultSet.getString("Hpic"));
+                hair.setHcomment(resultSet.getString("Hcomment"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
