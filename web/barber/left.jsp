@@ -1,5 +1,8 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%@ page import="barber.bean.BarberBean" %>
+<%@ page import="barber.bean.NoticesBean" %>
+<%@ page import="barber.dao.NoticeDao" %>
+<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: 11616
@@ -79,30 +82,22 @@
                 <div class="news-title-fr news-title-img01"></div>
             </a>
             <ul class="news-content-lists clearfix">
+                <%
+                    List<NoticesBean> noticesBeanList = NoticeDao.quaryNoticesList();
+                    int len = noticesBeanList.size();
+                    if (len > 4) {
+                        len = 4;
+                    }
+                    for (int i = 0; i < len; i++) {
+                %>
                 <li class="clearfix">
-                    <a href="#">
-                        <i>【08-09】</i>
-                        <span>关于Man The server反射放大攻击的安全预警通知</span>
+                    <a href="/notice.jsp?nid=<%=noticesBeanList.get(i).getNid()%>">
+                        <i><%=noticesBeanList.get(i).getNtime()%></i>
+                        <span><%=noticesBeanList.get(i).getNtitle()%></span>
                     </a>
                 </li>
-                <li class="clearfix">
-                    <a href="#">
-                        <i>【03-16】</i>
-                        <span>关于青岛1区、东北2区带宽价格下调的通知</span>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="#">
-                        <i>【02-095</i>
-                        <span>官网提示春节假期公告信息</span>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="#">
-                        <i>【01-02】</i>
-                        <span>云计算市场爆发，云市场应用开启高效云管理模式</span>
-                    </a>
-                </li>
+                <%}%>
+
             </ul>
         </div>
     </div>
