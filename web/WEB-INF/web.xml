@@ -31,4 +31,13 @@
         <servlet-name>OrderServlet</servlet-name>
         <url-pattern>/order</url-pattern>
     </servlet-mapping>
+    <!--错误页面-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/500.jsp</location>
+    </error-page>
 </web-app>
