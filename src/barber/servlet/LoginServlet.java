@@ -27,14 +27,14 @@ public class LoginServlet extends HttpServlet {
                     RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("main.jsp");
                     requestDispatcher.forward(httpServletRequest, httpServletResponse);
                 }else {
-                    httpServletResponse.sendRedirect("index.jsp");
+                    httpServletResponse.sendRedirect("0/1login.jsp");
                 }
                 break;
             case (1)://用户注册操作
                 Long uid = Long.valueOf(httpServletRequest.getParameter("Uid"));
                 String upass = httpServletRequest.getParameter("Upassword");
                 UserDao.insertUserbean(uid, upass);
-                RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("index.jsp");
+                RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("0/2bug.jsp");
                 requestDispatcher.forward(httpServletRequest, httpServletResponse);
                 break;
             case (2)://发型师登录检测操作
@@ -42,14 +42,14 @@ public class LoginServlet extends HttpServlet {
                     RequestDispatcher requestDispatcher1 = httpServletRequest.getRequestDispatcher("barber/main.jsp");
                     requestDispatcher1.forward(httpServletRequest, httpServletResponse);
                 }else {
-                    httpServletResponse.sendRedirect("index.jsp");
+                    httpServletResponse.sendRedirect("0/1login.jsp");
                 }
                 break;
             case (3)://发型师注册操作
                 Long bid = Long.valueOf(httpServletRequest.getParameter("Bid"));
                 String bpass = httpServletRequest.getParameter("Bpassword");
                 BarberDao.insertBarberbean(bid, bpass);
-                RequestDispatcher requestDispatcher2 = httpServletRequest.getRequestDispatcher("index.jsp");
+                RequestDispatcher requestDispatcher2 = httpServletRequest.getRequestDispatcher("0/3bug.jsp");
                 requestDispatcher2.forward(httpServletRequest, httpServletResponse);
                 break;
             default:
