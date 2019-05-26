@@ -12,11 +12,12 @@ public class UserDao {
 
     //   查询用户信息
     public static UserBean queryUserBean(Long userId) {
-        UserBean userBean = new UserBean();
+        UserBean userBean=null;
         String sql = "SELECT * FROM User where Uid =" + userId;
         ResultSet rs = dbHelper.execuQuery(sql);
         try {
             while (rs.next()) {
+                userBean = new UserBean();
                 userBean.setUid(rs.getLong("Uid"));
                 userBean.setUage(rs.getInt("Uage"));
                 userBean.setUname(rs.getString("Uname"));
