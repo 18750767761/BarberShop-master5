@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="BarberShop-master:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/BarberShop_master_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="BarberShop-master" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="BarberShop-master/web/Web" />
+    </root>
+  </artifact>
+</component>
