@@ -20,8 +20,6 @@
         <div class="profile-card__cnt js-profile-cnt">
             <div class="profile-card__name"><%=user.getUname()%>
             </div>
-            <div class="profile-card__txt">
-                真理惟一可靠的标准就是永远自相符合。<strong>鲁迅</strong></div>
 
             <!--信息-->
             <div class="profile-card-inf">

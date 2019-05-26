@@ -4,7 +4,6 @@
     background: #ffffff;
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
-    padding-top: 70px;
   }
 
 
@@ -42,9 +41,9 @@
 
   p {
     color: #757575;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
-    line-height: 24px;
+    line-height: 30px;
   }
 
 
@@ -150,8 +149,9 @@
   }
 
   section {
-    position: relative;
-    padding: 100px 0;
+    position: absolute;
+    height: 100%;
+    /*padding: 100px 0;*/
   }
 
   #team,
@@ -646,17 +646,19 @@
 
   .tst-image,
   .tst-author {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
   }
 
   .tst-image img {
-    border-radius: 50px;
-    width: 60px !important;
-    height: 60px;
-    margin-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    width: 100% !important;
+    height: 30%;
+    /*margin-right: 15px;*/
   }
 
   .tst-author h4 {

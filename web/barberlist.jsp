@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" import="java.lang.*, java.io.*, java.sql.*, java.util.*" %>
-<html>
+<html >
 <head>
     <title>barberlist</title>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link href="statics/css/firstStyle.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="statics/css/ProfileCardStyle.css">
 </head>
-<body>
+<body style="background: rgba(6,255,155,0.17);">
 <jsp:include page="header.jsp"/>
 <script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 <script src="statics/js/main.js" type="text/javascript" charset="utf-8"></script>

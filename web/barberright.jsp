@@ -19,10 +19,10 @@
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 <!-- TESTIMONIAL -->
-<section id="testimonial">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
+<section >
+    <div style="margin-left:0.5%;margin-right:0.5%;height:100%;">
+        <div style="height: 100%">
+            <div style="height: 100%">
                 <div class="owl-carousel owl-theme owl-client">
                     <%
 

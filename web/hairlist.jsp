@@ -22,7 +22,7 @@
     <jsp:include page="left.jsp"/>
     <div class="right">
         <div class="test">
-            <table width="97%" align="center" cellspacing="20px">
+            <table style="width:97%;cellspacing:20px;margin-left:auto;margin-right:auto;margin-bottom:10%">
                 <tr>
                     <td>
                         <!-- 发型展示第一行 -->

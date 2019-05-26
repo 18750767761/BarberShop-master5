@@ -9,7 +9,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html >
 <head>
     <meta charset="UTF-8">
     <title>路桥理发店</title>
@@ -34,7 +34,7 @@
     <jsp:include page="left.jsp"/>
     <div class="right">
         <div class="test">
-            <table width="97%" align="center" cellspacing="20px">
+            <table style="width:97%;align:center;cellspacing:20px;margin-bottom:10%">
                 <tr>
                     <td>
                         <!-- 发型展示第一行 -->
@@ -53,7 +53,7 @@
                             }
                             for (int i = 0; i < n; i++) {
                         %>
-                        <table width="100%" height="150px" cellspacing="40px">
+                        <table width="100%" height="150px" cellspacing="30px">
                             <tr align="center">
                                 <td class="css" colspan="2" rowspan="2" href="www.baidu.com">
                                     <a href="barberlist.jsp?Hid=<%=hairlist.get(i).getHid()%>">

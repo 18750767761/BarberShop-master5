@@ -29,7 +29,7 @@
     <jsp:include page="left.jsp"/>
     <div class="right">
         <div class="test">
-            <table style="width:100%;height:100%;" cellspacing="15px">
+            <table style="width:100%;border-collapse:separate; border-spacing:0px 15px;margin-bottom: 15%">
                 <%
                     UserBean user = (UserBean) session.getAttribute("user");
                     List<OrderBean> order = OrderDao.quaryOrder(user.getUid());
