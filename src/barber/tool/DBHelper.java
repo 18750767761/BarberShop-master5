@@ -8,7 +8,7 @@ public class DBHelper {
     static final private String DB_URL = "jdbc:mysql://localhost:3306/BarberShop?useUnicode=true&characterEncoding=utf8";
     static final private String USER = "root";
 //    Wwlt1234!
-        static final private String password = "123456";
+        static final private String password = "qq201314";
 //    static final private String password = "";
     static private Connection connection = null;
     static Statement stmt = null;
