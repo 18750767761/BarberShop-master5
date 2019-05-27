@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/web/admin/system-base.html" />
+    <file url="file://$PROJECT_DIR$/web/admin/system-category-add.html" />
+    <file url="file://$PROJECT_DIR$/web/admin/system-category.html" />
+    <file url="file://$PROJECT_DIR$/web/admin/system-data.html" />
+    <file url="file://$PROJECT_DIR$/web/admin/system-log.html" />
+    <file url="file://$PROJECT_DIR$/web/admin/system-shielding.html" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="10 (1)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

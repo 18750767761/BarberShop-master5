@@ -77,4 +77,10 @@ public class BarberDao {
         }
         return rec;
     }
+
+//    删除理发师信息
+    public  static void deleteBarber(Long bid){
+        String sql = "delete FROM barber where Bid =" + bid;
+        dbHelper.executeUpdate(sql);
+    }
 }

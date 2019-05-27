@@ -77,55 +77,55 @@
                         <dl style="width:12%;">
                             <dt style="font-size:15px;">女生</dt>
                             <dd>
-                                <a href="hair?type=nvshengduanfa" style="font-size: 15px;">短发</a></dd>
+                                <a href="hair?type=nvshengduanfa&sign=1" style="font-size: 15px;">短发</a></dd>
                             <dd>
-                                <a href="hair?type=nvshengzhongchangfa" style="font-size: 15px;">中长发</a></dd>
+                                <a href="hair?type=nvshengzhongchangfa&sign=1" style="font-size: 15px;">中长发</a></dd>
                             <dd>
-                                <a href="hair?type=nvshengzhifa" style="font-size: 15px;">直发</a></dd>
+                                <a href="hair?type=nvshengzhifa&sign=1" style="font-size: 15px;">直发</a></dd>
                             <dd>
-                                <a href="hair?type=nvshengjuanfa" style="font-size: 15px;">卷发</a></dd>
+                                <a href="hair?type=nvshengjuanfa&sign=1" style="font-size: 15px;">卷发</a></dd>
                             <dd>
-                                <a href="hair?type=nvshengtangfa" style="font-size: 15px;">烫发</a></dd>
+                                <a href="hair?type=nvshengtangfa&sign=1" style="font-size: 15px;">烫发</a></dd>
                             <dd>
-                                <a href="hair?type=nvshengranfa" style="font-size: 15px;">染发</a></dd>
+                                <a href="hair?type=nvshengranfa&sign=1" style="font-size: 15px;">染发</a></dd>
                         </dl>
 
                         <dl style="width:12%;">
                             <dt style="font-size:15px;">女生</dt>
                             <dd>
-                                <a href="hair?type=nvshenglianxingpeifaxing" style="font-size: 15px;">脸型</a></dd>
+                                <a href="hair?type=nvshenglianxingpeifaxing&sign=1" style="font-size: 15px;">脸型</a></dd>
                             <dd>
-                                <a href="hair?type=guzhuang" style="font-size: 15px;">古装</a></dd>
+                                <a href="hair?type=guzhuang&sign=1" style="font-size: 15px;">古装</a></dd>
                             <dd>
-                                <a href="hair?type=fashi" style="font-size: 15px;">发饰</a></dd>
+                                <a href="hair?type=fashi&sign=1" style="font-size: 15px;">发饰</a></dd>
                             <dd>
-                                <a href="hair?type=xiaonvhaifaxing" style="font-size: 15px;">小女孩</a></dd>
+                                <a href="hair?type=xiaonvhaifaxing&sign=1" style="font-size: 15px;">小女孩</a></dd>
                             <dd>
-                                <a href="hair?type=feizhuliufaxingnv" style="font-size: 15px;">非主流</a></dd>
+                                <a href="hair?type=feizhuliufaxingnv&sign=1" style="font-size: 15px;">非主流</a></dd>
                             <dd>
-                                <a href="hair?type=xinniangfaxingtupian" style="font-size: 15px;">新娘</a></dd>
+                                <a href="hair?type=xinniangfaxingtupian&sign=1" style="font-size: 15px;">新娘</a></dd>
 
                         </dl>
 
                         <dl style="width:12%;">
                             <dt style="font-size:15px;">男生</dt>
                             <dd>
-                                <a href="hair?type=nanshengduanfa" style="font-size: 15px;">短发</a>
+                                <a href="hair?type=nanshengduanfa&sign=1" style="font-size: 15px;">短发</a>
                             </dd>
                             <dd>
-                                <a href="hair?type=nanshengzhongchangfa" style="font-size: 15px;">中长发</a>
+                                <a href="hair?type=nanshengzhongchangfa&sign=1" style="font-size: 15px;">中长发</a>
                             </dd>
                             <dd>
-                                <a href="hair?type=nanshengjuanfa" style="font-size: 15px;">卷发</a>
+                                <a href="hair?type=nanshengjuanfa&sign=1" style="font-size: 15px;">卷发</a>
                             </dd>
                             <dd>
-                                <a href="hair?type=nanshengtangfa" style="font-size: 15px;">烫发</a>
+                                <a href="hair?type=nanshengtangfa&sign=1" style="font-size: 15px;">烫发</a>
                             </dd>
                             <dd>
-                                <a href="hair?type=nanshengranfa" style="font-size: 15px;">染发</a>
+                                <a href="hair?type=nanshengranfa&sign=1" style="font-size: 15px;">染发</a>
                             </dd>
                             <dd>
-                                <a href="hair?type=nanshenglianxingpeifaxing" style="font-size: 15px;">脸型</a>
+                                <a href="hair?type=nanshenglianxingpeifaxing&sign=1" style="font-size: 15px;">脸型</a>
                             </dd>
 
                         </dl>
@@ -133,13 +133,13 @@
                         <dl style="width:12%;">
                             <dt style="font-size:15px;">男生</dt>
                             <dd>
-                                <a href="hair?type=xiaonanhaifaxing" style="font-size: 15px;">小男孩</a>
+                                <a href="hair?type=xiaonanhaifaxing&sign=1" style="font-size: 15px;">小男孩</a>
                             </dd>
                             <dd>
-                                <a href="hair?type=feizhuliufaxingnan" style="font-size: 15px;">非主流</a>
+                                <a href="hair?type=feizhuliufaxingnan&sign=1" style="font-size: 15px;">非主流</a>
                             </dd>
                             <dd>
-                                <a href="hair?type=nanmingxing" style="font-size: 15px;">男明星</a>
+                                <a href="hair?type=nanmingxing&sign=1" style="font-size: 15px;">男明星</a>
                             </dd>
 
                         </dl>

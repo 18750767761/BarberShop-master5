@@ -1,14 +1,10 @@
 <%@ page contentType="text/html; charset=utf-8" import="java.sql.*" errorPage="" %>
 <%@ page import="barber.bean.OrderBean" %>
-<%@ page import="java.util.List" %>
 <%@ page import="barber.dao.OrderDao" %>
 <%@ page import="barber.bean.HairStyleBean" %>
 <%@ page import="barber.dao.HairDao" %>
 <%@ page import="barber.bean.UserBean" %>
-<%@ page import="java.text.DateFormat" %>
-<%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.util.Locale" %>
+<%@ page import="java.util.List" %>
 <html>
 <head>
     <meta charset="UTF-8">

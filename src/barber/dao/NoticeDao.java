@@ -50,4 +50,10 @@ public class NoticeDao {
         System.out.println(notice.getNid());
         return notice;
     }
+
+//    删除公告
+    public static void deleteNotice(Long nid){
+        String sql = "delete FROM notice where Nid =" + nid;
+        dbHelper.executeUpdate(sql);
+    }
 }

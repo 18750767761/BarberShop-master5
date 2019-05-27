@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
                 Long uid = Long.valueOf(httpServletRequest.getParameter("Uid"));
                 String upass = httpServletRequest.getParameter("Upassword");
                 UserDao.insertUserbean(uid, upass);
-                RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("0/2bug.jsp");
+                RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher("0/2regist.jsp");
                 requestDispatcher.forward(httpServletRequest, httpServletResponse);
                 break;
             case (2)://发型师登录检测操作
@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
                 Long bid = Long.valueOf(httpServletRequest.getParameter("Bid"));
                 String bpass = httpServletRequest.getParameter("Bpassword");
                 BarberDao.insertBarberbean(bid, bpass);
-                RequestDispatcher requestDispatcher2 = httpServletRequest.getRequestDispatcher("0/3bug.jsp");
+                RequestDispatcher requestDispatcher2 = httpServletRequest.getRequestDispatcher("0/3barberRegist.jsp");
                 requestDispatcher2.forward(httpServletRequest, httpServletResponse);
                 break;
             default:

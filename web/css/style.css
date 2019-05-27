@@ -306,13 +306,13 @@ h1 {
     z-index: 1;
 } */
 
-.vertical-tab input[name="sections"]:checked+label {
+.vertical-tab input[name="sections"]:checked + label {
     background: #00ad45;
     border-right: 1px solid #000;
     color: #fff;
 }
 
-.vertical-tab input[name="sections"]:checked~article {
+.vertical-tab input[name="sections"]:checked ~ article {
     display: block;
 }
 
@@ -466,13 +466,13 @@ a.bottom-text-w3ls {
 /* //copyright */
 
 /* responsive */
-@media(max-width: 1080px) {
+@media (max-width: 1080px) {
     h1 {
         font-size: 4vw;
     }
 }
 
-@media(max-width: 1050px) {
+@media (max-width: 1050px) {
     .sub-main-w3 {
         max-width: 900px;
     }
@@ -492,7 +492,7 @@ a.bottom-text-w3ls {
     }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     .sub-main-w3 {
         max-width: 768px;
     }
@@ -514,7 +514,7 @@ a.bottom-text-w3ls {
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .sub-main-w3 {
         max-width: 575px;
         display: -webkit-box;
@@ -537,19 +537,19 @@ a.bottom-text-w3ls {
     }
 }
 
-@media(max-width: 667px) {
+@media (max-width: 667px) {
     h1 {
         font-size: 6vw;
     }
 }
 
-@media(max-width: 640px) {
+@media (max-width: 640px) {
     .copyright h2 {
         font-size: 14px;
     }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
     .sub-main-w3 {
         max-width: 500px;
     }
@@ -570,7 +570,7 @@ a.bottom-text-w3ls {
     }
 }
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
     .vertical-tab .section-w3ls article {
         min-width: 291px;
         left: 109px;
@@ -628,7 +628,7 @@ a.bottom-text-w3ls {
     }
 }
 
-@media(max-width: 414px) {
+@media (max-width: 414px) {
     .sub-main-w3 {
         max-width: 320px;
     }
@@ -646,7 +646,7 @@ a.bottom-text-w3ls {
         border-top: 1px solid #dcdcdc;
     }
 
-    .vertical-tab input[name="sections"]:checked+label {
+    .vertical-tab input[name="sections"]:checked + label {
         border-right: none;
         border-bottom: 1px solid #000;
         border-top: none;
@@ -679,7 +679,7 @@ a.bottom-text-w3ls {
 
 }
 
-@media(max-width: 320px) {
+@media (max-width: 320px) {
     .sub-main-w3 {
         max-width: 270px;
     }

@@ -7,7 +7,9 @@ public class DBHelper {
     static final private String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final private String DB_URL = "jdbc:mysql://localhost:3306/BarberShop?useUnicode=true&characterEncoding=utf8";
     static final private String USER = "root";
-    static final private String password = "123456";
+//    Wwlt1234!
+        static final private String password = "123456";
+//    static final private String password = "";
     static private Connection connection = null;
     static Statement stmt = null;
 
@@ -29,9 +31,9 @@ public class DBHelper {
         }
     }
 
-//    增删改操作
-    public boolean executeUpdate(String sql){
-        if (connection==null){
+    //    增删改操作
+    public boolean executeUpdate(String sql) {
+        if (connection == null) {
             getConnection();
         }
         try {
@@ -45,9 +47,9 @@ public class DBHelper {
         return true;
     }
 
-//    查询操作
-    public ResultSet execuQuery(String sql){
-        if (connection==null){
+    //    查询操作
+    public ResultSet execuQuery(String sql) {
+        if (connection == null) {
             getConnection();
         }
         ResultSet resultSet = null;
@@ -62,15 +64,15 @@ public class DBHelper {
         return resultSet;
     }
 
-//    关闭数据库
-    public void closeConnection(){
-        if (connection != null ){
+    //    关闭数据库
+    public void closeConnection() {
+        if (connection != null) {
             try {
                 connection.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-            }finally {
-                connection=null;
+            } finally {
+                connection = null;
             }
         }
     }

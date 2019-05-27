@@ -8,6 +8,7 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="BarberShop-master/web/Web" />
+      <element id="archive" name="archive.jar" />
     </root>
   </artifact>
 </component>

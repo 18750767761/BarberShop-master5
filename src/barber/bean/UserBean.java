@@ -49,7 +49,7 @@ public class UserBean {
         Utel = utel;
     }
 
-    public Integer getUscore(int uscore) {
+    public Integer getUscore() {
         return Uscore;
     }
 

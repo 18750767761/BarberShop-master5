@@ -62,4 +62,10 @@ public class HairDao {
         return hair;
     }
 
+    //    删除单独一个发型的信息
+    public static void deleteHair(Long id){
+        String sql = "delete FROM hairstyle where Hid =" + id;
+        dbHelper.executeUpdate(sql);
+    }
+
 }
